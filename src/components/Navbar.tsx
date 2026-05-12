@@ -9,6 +9,7 @@ export function Navbar() {
   const navigate = useNavigate();
 
   const onLogout = async () => {
+    console.log("Logout clicked");
     await supabase.auth.signOut();
     navigate({ to: "/" });
   };

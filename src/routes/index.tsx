@@ -17,9 +17,17 @@ export const Route = createFileRoute("/")({
 const SYMPTOMS = ["Back pain", "Skin allergy", "Chest pain", "Fever", "Headache", "Sore throat"];
 
 function Index() {
+  const handleTestClick = () => {
+    console.log("Test button clicked!");
+    alert("Button works!");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <button onClick={handleTestClick} className="fixed top-20 right-4 z-50 bg-red-500 text-white px-4 py-2 rounded">
+        Test Button
+      </button>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary-soft via-background to-background" />
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:pt-24">
